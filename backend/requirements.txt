@@ -1,0 +1,23 @@
+# LabelStudio Backend Dependencies
+
+# Web Framework
+Flask>=2.3.0
+Flask-CORS>=4.0.0
+Flask-SQLAlchemy>=3.1.0
+Werkzeug>=2.3.0
+
+# Database
+SQLAlchemy>=2.0.0
+
+# Image Processing
+Pillow>=10.0.0
+opencv-python>=4.8.0
+
+# QR Code
+qrcode[pil]>=7.4.0
+
+# Security
+python-dotenv>=1.0.0
+
+# Build & Packaging
+pyinstaller>=6.0.0

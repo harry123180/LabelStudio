@@ -1,0 +1,110 @@
+{
+  "app": {
+    "name": "LabelStudio",
+    "title": "標註工具"
+  },
+  "nav": {
+    "projects": "專案",
+    "settings": "設定",
+    "logout": "登出"
+  },
+  "home": {
+    "welcome": "歡迎使用 LabelStudio",
+    "description": "專為課堂教學設計的圖片標註工具",
+    "getStarted": "開始使用",
+    "createProject": "建立專案"
+  },
+  "projects": {
+    "title": "專案列表",
+    "create": "新增專案",
+    "name": "專案名稱",
+    "description": "描述",
+    "type": "類型",
+    "images": "圖片數量",
+    "created": "建立時間",
+    "actions": "操作",
+    "delete": "刪除",
+    "edit": "編輯",
+    "open": "開啟"
+  },
+  "project": {
+    "images": "圖片管理",
+    "classes": "類別管理",
+    "export": "匯出資料",
+    "qrcode": "QR Code 上傳",
+    "settings": "專案設定",
+    "split": "資料集分割",
+    "augmentation": "資料增強"
+  },
+  "annotate": {
+    "tools": "工具",
+    "bbox": "矩形框",
+    "polygon": "多邊形",
+    "brush": "筆刷",
+    "select": "選取",
+    "zoom": "縮放",
+    "undo": "復原",
+    "redo": "重做",
+    "save": "儲存",
+    "next": "下一張",
+    "prev": "上一張",
+    "classes": "類別",
+    "annotations": "標註"
+  },
+  "upload": {
+    "title": "上傳圖片",
+    "dragDrop": "拖曳圖片至此或點擊選擇",
+    "selectFiles": "選擇檔案",
+    "uploading": "上傳中",
+    "success": "上傳成功",
+    "failed": "上傳失敗"
+  },
+  "mobile": {
+    "title": "手機上傳",
+    "takePhoto": "點擊拍照或選擇相簿",
+    "nickname": "輸入你的暱稱",
+    "upload": "上傳",
+    "selected": "已選擇",
+    "images": "張圖片"
+  },
+  "export": {
+    "title": "匯出資料集",
+    "format": "匯出格式",
+    "includeAugmentation": "套用資料增強",
+    "download": "下載",
+    "formats": {
+      "yolo": "YOLO 格式",
+      "coco": "COCO JSON",
+      "voc": "Pascal VOC",
+      "createml": "CreateML",
+      "csv": "CSV"
+    }
+  },
+  "split": {
+    "title": "資料集分割",
+    "train": "訓練集",
+    "val": "驗證集",
+    "test": "測試集",
+    "total": "總計",
+    "random": "隨機分配",
+    "sequential": "依序分配",
+    "stratified": "分層抽樣",
+    "apply": "套用分割"
+  },
+  "auth": {
+    "login": "登入",
+    "register": "註冊",
+    "username": "使用者名稱",
+    "password": "密碼",
+    "submit": "送出"
+  },
+  "common": {
+    "save": "儲存",
+    "cancel": "取消",
+    "delete": "刪除",
+    "confirm": "確認",
+    "loading": "載入中...",
+    "error": "錯誤",
+    "success": "成功"
+  }
+}

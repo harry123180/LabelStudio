@@ -2,6 +2,38 @@
 
 一個專為課堂教學設計的輕量級圖片標註工具，讓學員能在區域網路內協同進行資料標註。
 
+---
+
+## 設計原則
+
+### 語言規範
+
+| 項目 | 規範 |
+|------|------|
+| **預設語言** | 繁體中文 (zh-TW) |
+| **次要語言** | English (en) |
+| **禁止語言** | 簡體中文 (zh-CN) ❌ |
+| **切換方式** | 介面右上角語言選單 |
+
+本專案服務對象為**台灣學生與外籍生**，因此：
+
+- 所有 UI 文字、提示訊息、錯誤訊息皆提供**繁體中文 / 英文**雙語版本
+- 程式碼註解以英文為主
+- 文件 (README、API Doc) 以繁體中文為主
+- **不提供、不支援、不接受簡體中文**
+
+```
+┌─────────────────────────────────────────┐
+│  LabelStudio                    🌐 ▼   │
+│                              ┌────────┐│
+│                              │ 繁體中文││
+│                              │ English ││
+│                              └────────┘│
+└─────────────────────────────────────────┘
+```
+
+---
+
 ## 專案動機
 
 [Roboflow](https://roboflow.com) 是優秀的圖片標註與訓練 SaaS 平台，但註冊限制多、依賴外網。本專案目標是打造一個**可離線部署、適合教學情境**的替代方案。
@@ -575,12 +607,13 @@ LabelStudio/
 ├── backend/                 # Flask 後端
 │   ├── app/
 │   │   ├── __init__.py
+│   │   ├── config.py       # 應用設定
 │   │   ├── models/         # 資料模型
 │   │   ├── routes/         # API 路由
 │   │   ├── services/       # 業務邏輯
 │   │   └── utils/          # 工具函數
 │   ├── migrations/         # 資料庫遷移
-│   ├── config.py
+│   ├── main.py             # 主程式入口
 │   └── requirements.txt
 │
 ├── frontend/               # Vue 3 前端
@@ -588,16 +621,32 @@ LabelStudio/
 │   │   ├── components/    # 元件
 │   │   ├── views/         # 頁面
 │   │   ├── stores/        # Pinia 狀態管理
+│   │   ├── locales/       # i18n 語言檔 (zh-TW, en)
 │   │   └── utils/         # 工具函數
 │   ├── package.json
 │   └── vite.config.js
+│
+├── skills/                # AI Agents 調用腳本
+│   ├── __init__.py
+│   ├── base.py           # 基礎 Skill 類別
+│   ├── dataset.py        # 資料集操作
+│   ├── annotation.py     # 標註操作
+│   ├── export.py         # 匯出操作
+│   ├── augmentation.py   # 增強操作
+│   └── README.md
 │
 ├── scripts/               # 打包腳本
 │   ├── build.py          # 自動化建置腳本
 │   └── labelstudio.spec  # PyInstaller 配置
 │
-├── uploads/               # 上傳圖片儲存
-├── exports/               # 匯出檔案暫存
+├── assets/               # 靜態資源 (icon.ico 等)
+├── data/                 # 執行時資料 (自動生成)
+│   ├── uploads/         # 上傳圖片
+│   ├── exports/         # 匯出檔案
+│   └── labelstudio.db   # SQLite 資料庫
+│
+├── .gitignore
+├── CLAUDE.md             # Claude 記憶檔
 └── README.md
 ```
 

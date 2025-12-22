@@ -1,0 +1,110 @@
+{
+  "app": {
+    "name": "LabelStudio",
+    "title": "Annotation Tool"
+  },
+  "nav": {
+    "projects": "Projects",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "home": {
+    "welcome": "Welcome to LabelStudio",
+    "description": "Image annotation tool designed for classroom teaching",
+    "getStarted": "Get Started",
+    "createProject": "Create Project"
+  },
+  "projects": {
+    "title": "Projects",
+    "create": "New Project",
+    "name": "Project Name",
+    "description": "Description",
+    "type": "Type",
+    "images": "Images",
+    "created": "Created",
+    "actions": "Actions",
+    "delete": "Delete",
+    "edit": "Edit",
+    "open": "Open"
+  },
+  "project": {
+    "images": "Images",
+    "classes": "Classes",
+    "export": "Export",
+    "qrcode": "QR Code Upload",
+    "settings": "Settings",
+    "split": "Dataset Split",
+    "augmentation": "Augmentation"
+  },
+  "annotate": {
+    "tools": "Tools",
+    "bbox": "Bounding Box",
+    "polygon": "Polygon",
+    "brush": "Brush",
+    "select": "Select",
+    "zoom": "Zoom",
+    "undo": "Undo",
+    "redo": "Redo",
+    "save": "Save",
+    "next": "Next",
+    "prev": "Previous",
+    "classes": "Classes",
+    "annotations": "Annotations"
+  },
+  "upload": {
+    "title": "Upload Images",
+    "dragDrop": "Drag and drop images here or click to select",
+    "selectFiles": "Select Files",
+    "uploading": "Uploading",
+    "success": "Upload successful",
+    "failed": "Upload failed"
+  },
+  "mobile": {
+    "title": "Mobile Upload",
+    "takePhoto": "Tap to take photo or select from gallery",
+    "nickname": "Enter your nickname",
+    "upload": "Upload",
+    "selected": "Selected",
+    "images": "images"
+  },
+  "export": {
+    "title": "Export Dataset",
+    "format": "Export Format",
+    "includeAugmentation": "Include Augmentation",
+    "download": "Download",
+    "formats": {
+      "yolo": "YOLO Format",
+      "coco": "COCO JSON",
+      "voc": "Pascal VOC",
+      "createml": "CreateML",
+      "csv": "CSV"
+    }
+  },
+  "split": {
+    "title": "Dataset Split",
+    "train": "Training",
+    "val": "Validation",
+    "test": "Test",
+    "total": "Total",
+    "random": "Random",
+    "sequential": "Sequential",
+    "stratified": "Stratified",
+    "apply": "Apply Split"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Submit"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  }
+}
