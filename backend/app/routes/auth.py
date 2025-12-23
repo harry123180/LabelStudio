@@ -4,7 +4,7 @@ Authentication Routes
 """
 from flask import Blueprint, request, jsonify
 from app.models import User
-from app import db
+from app.extensions import db
 
 auth_bp = Blueprint('auth', __name__)
 

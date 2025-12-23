@@ -13,6 +13,7 @@ def register_blueprints(app: Flask):
     from .annotations import annotations_bp
     from .export import export_bp
     from .qrcode import qr_bp
+    from .members import members_bp
 
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
     app.register_blueprint(projects_bp, url_prefix='/api/projects')
@@ -20,3 +21,4 @@ def register_blueprints(app: Flask):
     app.register_blueprint(annotations_bp, url_prefix='/api/annotations')
     app.register_blueprint(export_bp, url_prefix='/api/export')
     app.register_blueprint(qr_bp, url_prefix='/api/qr')
+    app.register_blueprint(members_bp, url_prefix='/api/members')

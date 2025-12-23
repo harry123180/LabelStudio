@@ -40,7 +40,7 @@ def main():
 
     # Initialize database
     with app.app_context():
-        from app import db
+        from app.extensions import db
         db.create_all()
 
     app.run(host=host, port=port, threaded=True)

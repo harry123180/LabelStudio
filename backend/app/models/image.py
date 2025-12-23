@@ -3,7 +3,7 @@
 Image Model
 """
 from datetime import datetime
-from app import db
+from app.extensions import db
 
 
 class Image(db.Model):
@@ -30,7 +30,8 @@ class Image(db.Model):
 
     # Status
     status = db.Column(db.String(20), default='pending')  # pending, annotated, reviewed
-    assigned_to = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
+    assigned_to = db.Column(db.String(100), nullable=True)  # Username assigned to annotate
+    annotated_by = db.Column(db.String(100), nullable=True)  # Username who actually annotated
 
     # Relationships
     annotations = db.relationship('Annotation', backref='image', lazy='dynamic', cascade='all, delete-orphan')
@@ -44,6 +45,8 @@ class Image(db.Model):
             'height': self.height,
             'split': self.split,
             'status': self.status,
+            'assigned_to': self.assigned_to,
+            'annotated_by': self.annotated_by,
             'uploader': self.uploader_name,
             'upload_source': self.upload_source,
             'uploaded_at': self.uploaded_at.isoformat(),

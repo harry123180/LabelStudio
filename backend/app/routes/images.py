@@ -5,7 +5,7 @@ Image Routes
 from flask import Blueprint, request, jsonify, current_app, send_from_directory
 from werkzeug.utils import secure_filename
 from app.models import Image, Project
-from app import db
+from app.extensions import db
 from PIL import Image as PILImage
 import os
 import uuid
@@ -105,3 +105,30 @@ def update_split(image_id):
 
     db.session.commit()
     return jsonify(image.to_dict())
+
+
+@images_bp.route('/<int:image_id>/status', methods=['PUT'])
+def update_status(image_id):
+    """Update image status"""
+    image = Image.query.get_or_404(image_id)
+    data = request.get_json()
+
+    if 'status' in data:
+        image.status = data['status']
+
+    db.session.commit()
+    return jsonify(image.to_dict())
+
+
+@images_bp.route('/<int:image_id>', methods=['DELETE'])
+def delete_image(image_id):
+    """Delete an image"""
+    image = Image.query.get_or_404(image_id)
+
+    # Delete file if exists
+    if os.path.exists(image.file_path):
+        os.remove(image.file_path)
+
+    db.session.delete(image)
+    db.session.commit()
+    return jsonify({'success': True})

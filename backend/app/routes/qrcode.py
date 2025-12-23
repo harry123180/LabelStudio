@@ -6,7 +6,7 @@ from flask import Blueprint, request, jsonify, current_app
 from werkzeug.utils import secure_filename
 from app.models import Image, Project
 from app.utils.network import get_local_ip
-from app import db
+from app.extensions import db
 from PIL import Image as PILImage
 import qrcode
 import io

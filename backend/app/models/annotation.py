@@ -3,7 +3,7 @@
 Annotation Model
 """
 from datetime import datetime
-from app import db
+from app.extensions import db
 import json
 
 
@@ -37,12 +37,23 @@ class Annotation(db.Model):
     def set_data(self, data: dict):
         self.data = json.dumps(data)
 
+    @property
+    def label_class_id(self):
+        """Alias for class_id"""
+        return self.class_id
+
+    @label_class_id.setter
+    def label_class_id(self, value):
+        self.class_id = value
+
     def to_dict(self) -> dict:
         return {
             'id': self.id,
             'image_id': self.image_id,
             'class_id': self.class_id,
+            'label_class_id': self.class_id,  # Alias for frontend
             'class_name': self.label_class.name if self.label_class else None,
+            'annotation_type': self.annotation_type,
             'type': self.annotation_type,
             'data': self.get_data(),
             'created_at': self.created_at.isoformat()

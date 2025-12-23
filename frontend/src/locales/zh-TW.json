@@ -34,7 +34,22 @@
     "qrcode": "QR Code 上傳",
     "settings": "專案設定",
     "split": "資料集分割",
-    "augmentation": "資料增強"
+    "augmentation": "資料增強",
+    "noImages": "尚未上傳圖片，請上傳圖片開始使用。",
+    "labelClasses": "標籤類別",
+    "addClass": "新增類別",
+    "noClasses": "尚未定義類別，請新增類別以開始標註。",
+    "className": "類別名稱",
+    "classColor": "顏色",
+    "shortcutKey": "快捷鍵",
+    "datasetSplit": "資料集分割",
+    "applySplit": "套用分割",
+    "resetSplit": "重置",
+    "exportData": "匯出資料",
+    "includeImages": "包含圖片",
+    "onlyAnnotated": "僅匯出已標註圖片",
+    "exporting": "匯出中...",
+    "fromMobile": "來自手機"
   },
   "annotate": {
     "tools": "工具",
@@ -49,11 +64,13 @@
     "next": "下一張",
     "prev": "上一張",
     "classes": "類別",
-    "annotations": "標註"
+    "annotations": "標註",
+    "start": "開始標註"
   },
   "upload": {
     "title": "上傳圖片",
     "dragDrop": "拖曳圖片至此或點擊選擇",
+    "clickToSelect": "點擊選擇檔案",
     "selectFiles": "選擇檔案",
     "uploading": "上傳中",
     "success": "上傳成功",
@@ -105,6 +122,7 @@
     "confirm": "確認",
     "loading": "載入中...",
     "error": "錯誤",
-    "success": "成功"
+    "success": "成功",
+    "refresh": "重新整理"
   }
 }
